@@ -1,0 +1,8 @@
+PWD-Where am I from a perspective of the current location (directory)
+ls- what is present in the currently accessed directory and is publicly visible
+ls-force - what is present in the currently accessed directory and is hidden
+cd -> Allows one to navigate to a specific folder 
+cd .. -> Allows one to navigate a step behind (to the parent folder)
+cd folder-name -> Allows one to navigate to a specific folder-name
+mkdir folder-name -> Allows ypu to create a folder in a specific directory
+new-item progress.txt- allows you to create a file in the specific directoryccd
