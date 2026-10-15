@@ -4,18 +4,23 @@
     min-height: 100vh;
 }
 body{
+    font-family: "DM Sans", system-ui, sans-serif;
     margin: 0;
     background-color: #fbf6f0;
     color: #241d19;
+}
+.label, .small-label, .info-top {
+    font-family: "DM Mono", monospace;
 }
 aside {
     border-right: 1px solid #ece3da;
     display: flex;
     flex-direction: column;
     gap: 14px;
+    padding: 16px 14px;
 }
 main{
-    padding: 28px 40px;
+    padding: 20px 16px;
 }
 .weather {
     margin-top: auto;
@@ -38,10 +43,11 @@ nav a.on {
 }
 button {
     padding: 10px 16px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ece3da;
     border-radius: 99px;
     background-color: #ece3da;
     cursor: pointer;
+    font-family: inherit;
 }
 .buttons {
     display: flex;
@@ -59,6 +65,11 @@ h1 {
 h1 em {
     color: #c0451f;
 }
+
+h1, h2, h3, h4 {
+    font-family:"Fraunces", Georgia, serif;
+    font-weight: 400;
+}
 .label {
     font-size: 11px;
     letter-spacing: 0.14em;
@@ -71,18 +82,38 @@ h1 em {
     color: #888888;
     margin: 0;
 }
+.welcome .small-label {
+    color: rgba(255, 255, 255, 0.7);
+}
 .big {
     font-size: 26px;
 }
 
 .brand {
     padding: 10px;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 22px;
+    line-height: 1;
 }
 
 .weather {
     background-color: #f6dd8f;
+    padding: 14px;
+    border-radius: 14px;
+    color: #3a2a10;
 }
 
+.weather-label {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+}
+.weather-temp {
+    display: block;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+}
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -153,7 +184,13 @@ h1 em {
     transform: translate(-310px) rotate(-6deg);
     transition: transform 0.5s ease-in-out;
 }
+
+.receipt, .welcome {
+    height: 380px;
+}
 .welcome {
+    display: flex;
+    flex-direction: column;
     width: 340px;
     padding: 24px;
     border-radius: 18px;
@@ -165,16 +202,63 @@ h1 em {
     transform: translate(10px) rotate(4deg);
     transition: transform 0.5s ease-in-out;
 }
+
+.room {
+    margin-top: auto;
+}
+
+.sun{
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 26px;
+    height: 26px;
+    color: #f5c842;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-sun {
+    width: 26px;
+    height: 26px;
+    color: #f5c842;
+}
+
+.brand-sun svg {
+    width: 100%;
+    height: 100%;
+}
+.note {
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    color: #ffd77a;
+    margin: 44px 0 0;
+}
+.welcome h2 {
+    font-style: italic;
+    font-size: 34px;
+    margin: 4px 0 14px;
+}
+.msg {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
 .stage {
     position: relative;
     height: 420px;
 }
 .stage:hover .receipt {
-    transform: translate(-350px) rotate(-10deg);
+    transform: translateX(-350px) rotate(-10deg);
 }
 .stage:hover .welcome {
-    transform: translate(50px) rotate(8deg);
+    transform: translateX(50px) rotate(8deg);
 }
+
 .line {
     display: flex;
     justify-content: space-between;
@@ -187,8 +271,8 @@ h1 em {
     text-align: center;
     border-top: 1px dashed #ece3da;
     border-bottom: 1px dashed #ece3da;
-    margin-top: 14px 0px;
-    padding-top: 12px 0px;
+    margin: 14px 0px;
+    padding: 12px 0px;
 }
 .sum {
     display: flex;
@@ -197,4 +281,29 @@ h1 em {
     border-bottom: 1px dashed #ece3da; 
     margin-top: 14px;
     padding: 10px 10px;
+}
+.amount {
+    font-size: 26px;
+}
+
+@media (max-width: 800px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .stage {
+        height: auto;
+    }
+    .receipt, .welcome {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 16px;
+    }
+    .stage:hover .receipt, .stage:hover .welcome {
+        transform: none;
+    }
 }
