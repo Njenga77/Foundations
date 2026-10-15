@@ -40,16 +40,15 @@ button {
     padding: 10px 16px;
     border: 1px solid #cccccc;
     border-radius: 99px;
-    background-color: white;
+    background-color: #ece3da;
     cursor: pointer;
-
+}
 .buttons {
     display: flex;
     gap: 12px;
 }
-}
 button.dark {
-    background-color: black;
+    background-color: #241d19;
     color: white;
 }
 h1 {
@@ -58,7 +57,7 @@ h1 {
     margin: 6px 0 0;
 }
 h1 em {
-    color: #2e7d32;
+    color: #c0451f;
 }
 .label {
     font-size: 11px;
@@ -66,6 +65,24 @@ h1 em {
     color: #888888;
     margin: 0;
 }
+.small-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: #888888;
+    margin: 0;
+}
+.big {
+    font-size: 26px;
+}
+
+.brand {
+    padding: 10px;
+}
+
+.weather {
+    background-color: #f6dd8f;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -93,14 +110,24 @@ h1 em {
     color: #888888;
 }
 .c1 .info-top {
-    color: #2e7d32;
+    color: #c0451f;
 }
 .c2 .info-top {
-    color: #1565c0;
+    color: #4f5bd5;
 }
 .c3 .info-top {
-    color: #ad1457;
+    color: #c93f74;
 }
+.c1 .badge {
+    background-color: #c0451f;
+}
+.c2 .badge {
+    background-color: #4f5bd5;
+}
+.c3 .badge {
+    background-color: #c93f74;
+}
+
 .info-left {
     display: flex;
     align-items: center;
@@ -110,7 +137,6 @@ h1 em {
     height: 34px;
     width: 34px;
     border-radius: 9px;
-    background-color: #2e7d32;
     color: white;
     display: grid;
     place-items: center;
@@ -123,8 +149,8 @@ h1 em {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     position: absolute;
     top: 20px;
-    left: 80px;
-    transform: rotate(-6deg);
+    left: 50%;
+    transform: translate(-310px) rotate(-6deg);
     transition: transform 0.5s ease-in-out;
 }
 .welcome {
@@ -135,8 +161,8 @@ h1 em {
     background: linear-gradient(150deg, #e07a3e, #b4411a);
     position: absolute;
     top: 20px;
-    left: 400px;
-    transform: rotate(4deg);
+    left: 50%;
+    transform: translate(10px) rotate(4deg);
     transition: transform 0.5s ease-in-out;
 }
 .stage {
@@ -144,8 +170,31 @@ h1 em {
     height: 420px;
 }
 .stage:hover .receipt {
-    transform: translate(-60px) rotate(-10deg);
+    transform: translate(-350px) rotate(-10deg);
 }
 .stage:hover .welcome {
-    transform: translate(60px) rotate(8deg);
+    transform: translate(50px) rotate(8deg);
+}
+.line {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+    color: #7a6f68;
+}
+.dates {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 1px dashed #ece3da;
+    border-bottom: 1px dashed #ece3da;
+    margin-top: 14px 0px;
+    padding-top: 12px 0px;
+}
+.sum {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed #ece3da;
+    border-bottom: 1px dashed #ece3da; 
+    margin-top: 14px;
+    padding: 10px 10px;
 }
