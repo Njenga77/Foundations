@@ -171,3 +171,28 @@ console.log("Is a greater than or equal to b? " + (a >= b)); // prints true beca
 // Less than or equal to (<=) - The less than or equal to operator compares two values 
 // and returns true if the left operand is less than or equal to the right operand, and false if it is not.
 console.log("Is a less than or equal to b? " + (a <= b)); // prints true because 10 is equal to "10
+
+// TYPE CONVERSION
+// Implicit type conversion
+
+result = "3" + 2;
+console.log(result, "-", typeof(result));
+
+// Covert string to numbers
+result = true + "3";
+console.log(result, "-", typeof(result));
+
+// Explicit type conversion
+let results;
+
+// Convert strings to numbers
+results = Number("5");
+console.log(result, "-", typeof(results));
+
+// Convert boolean to string
+results = String(true);
+console.log(results, "-", typeof(results));
+
+// Convert number to Boolean
+results = Boolean(0);
+console.log(results, "-", typeof(results));
