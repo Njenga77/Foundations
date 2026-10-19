@@ -196,3 +196,27 @@ console.log(results, "-", typeof(results));
 // Convert number to Boolean
 results = Boolean(0);
 console.log(results, "-", typeof(results));
+
+
+// SWITCH STATEMENT
+let trafficlight = "purple";
+let message = ""
+
+switch (trafficlight) {
+    case "red":
+        message = "Stop Immediately.";
+        break;
+
+    case "yellow":
+        message = "Start your car and prepare to Go.";
+        break;
+
+    case "green":
+        message = "Go.";
+        break;
+
+     default:
+        message = "Invalid traffic light.";
+}
+
+console.log(message)
